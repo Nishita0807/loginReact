@@ -1,13 +1,55 @@
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
-}
+    position: relative;
+    background: linear-gradient(190deg, #f8fafc 50%, white 50%);
+  }
+  
+  body::before,
+  body::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 5px;
+    transform: translateY(-50%) rotate(190deg);
+  }
+  
+  body::after,
+  body::before {
+    top: 50%;
+    background: linear-gradient(to right, #5bf7db 20%, transparent 20%, transparent 80%, #5bf7db 80%);
+  }
+
+  
+  .signup-form{
+   
+    z-index:1;
+    display:flex;
+    flex-direction: column;
+    padding-left:48px;
+    padding-right:48px;
+    gap:3px;
+    width: 444px;
+    height: auto;
+    flex-shrink: 0;
+    border-radius: 4px;
+    background: #FFF;
+    margin-top: 100px;
+    box-shadow: 0px 6px 8px 0px rgba(0, 0, 0, 0.05);
+    
+  }
+
+  @media (max-width: 876px) {
+      
+  body::after,
+  body::before {
+    top: 50%;
+    background: linear-gradient(to right, #5bf7db 3%, transparent 20%, transparent 80%, #5bf7db 50%);
+  }
+  }
